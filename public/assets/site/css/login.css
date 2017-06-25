@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+#login-page {
+    padding: 4% 0 0;
+}
+
+#login-page .form-login {
+    margin-bottom: 30px;
+}
+
+#login-page .form-login form {
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+#login-page .form-login form h1 {
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+
+#login-page .form-login form .form-control {
+    background: none;
+    border: 3px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    height: 50px;
+}
+
+#login-page .text-login {
+    margin: 0 auto;
+    max-width: 550px;
+}
+
+@media (max-width: 991px) {
+    #login-page {
+        padding: 4% 0;
+    }
+}

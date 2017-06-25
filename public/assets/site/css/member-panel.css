@@ -1,0 +1,87 @@
+#member-panel {
+    font-size: 80%;
+    padding: 8% 0 0;
+}
+
+#member-panel .box {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+#member-panel .box .box-body {
+    padding: 10px;
+}
+
+#member-panel .box-body h3 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    margin: 10px 0;
+    padding-bottom: 10px;
+}
+
+#member-panel .box-body .nav li:first-child {
+    margin-top: 0;
+}
+
+#member-panel .box-body .nav li {
+    margin: 5px 0;
+    width: 100%;
+}
+
+#member-panel .box-body .nav li a {
+    padding: 7px 10px;
+}
+
+#member-panel .box-body .nav li a:hover {
+    background: orange;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#member-panel .box-body .nav li.active a {
+    background: rgba(0, 0, 0, 0.8);
+    color: orange;
+}
+
+.profile-user-img {
+    border: 3px solid rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+    padding: 3px;
+    width: 100px;
+}
+
+.profile-user-img:hover {
+    border-color: orange;
+}
+
+#member-panel .nav-tabs-custom .tab-content {
+    min-height: 355px;
+}
+
+#member-panel .nav-tabs-custom .tab-content b {
+    color: orange;
+}
+
+#member-panel .box-send {
+    margin-top: 50px;
+}
+
+#member-panel .box-send #btn-upload {
+    background: rgba(0, 0, 0, 0.8);
+    border: 4px dashed transparent;
+    color: orange;
+    display: inline-block;
+    padding: 20px;
+}
+
+#member-panel .box-send #btn-upload i {
+    font-size: 80px;
+}
+
+#member-panel .box-send #btn-upload:hover {
+    background: transparent;
+    border-color: orange;
+    color: #000;
+}

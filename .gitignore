@@ -1,3 +1,15 @@
+/vendor
 /node_modules
-/bower_components
+Homestead.yaml
+Homestead.json
+.env
 .idea/
+bower_components
+.DS_Store
+._.DS_Store
+.gitkeep
+/public/uploads/
+/public/vendor/laravel-filemanager
+module.json
+/nbproject/private/
+/nbproject

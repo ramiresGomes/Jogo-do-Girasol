@@ -1,0 +1,31 @@
+.avatar {
+    display: inline-block;
+    position: relative;
+}
+
+.avatar a {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0;
+    font-weight: bold;
+    height: calc(100% - 10px);
+    left: 5px;
+    line-height: 10px;
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    width: calc(100% - 10px);
+}
+
+.avatar i {
+    position: relative;
+    top: calc(50% - 30px);
+}
+
+.avatar:hover a {
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 60px;
+}
