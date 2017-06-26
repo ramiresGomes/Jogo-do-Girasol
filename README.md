@@ -5,7 +5,14 @@ Espalhe o amor nesse desafio do bem!
 
 ## ToDo
 
-- [ ] ddddd
+- [ ] Upload de imagem para membros
+- [ ] Upload de imagem para usuários
+- [ ] Timeline do usuário
+- [ ] Formulário de alteração dos dados do membro
+- [ ] Configuração do Google Analytics
+- [ ] Galeria de imagens na página inicial
+- [ ] Regulamento e/ou termos de uso
+- [ ] Link para Facebook e Instagram
 
 ## Autor
 
