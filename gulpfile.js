@@ -9,11 +9,9 @@ elixir(function(mix) {
         '../../../public/bower_components/Ionicons/css/ionicons.min.css',
         '../../../public/bower_components/AdminLTE/plugins/pace/pace.min.css',
         '../../../public/bower_components/AdminLTE/plugins/select2/select2.min.css',
-        '../../../public/bower_components/AdminLTE/plugins/datepicker/datepicker3.css',
         '../../../public/bower_components/AdminLTE/bootstrap/css/bootstrap.min.css',
         '../../../public/bower_components/font-awesome/css/font-awesome.min.css',
         '../../../public/bower_components/noty/lib/noty.css',
-        '../../../public/bower_components/animate.css/animate.min.css',
         '../../../public/bower_components/sweetalert/dist/sweetalert.css',
         '../../../public/bower_components/AdminLTE/dist/css/AdminLTE.min.css',
 

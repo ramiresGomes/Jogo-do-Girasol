@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Square 3.0 {{ ($page_title) ? "| {$page_title}" : null }}</title>
+    <title>Jogo do Girasol {{ ($page_title) ? "| {$page_title}" : null }}</title>
 
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 

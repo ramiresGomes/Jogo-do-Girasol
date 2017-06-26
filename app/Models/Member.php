@@ -17,7 +17,7 @@ class Member extends Authenticatable
     public function challenges()
     {
         return $this->belongsToMany(Challenge::class, 'members_challenges')
-            ->withPivot('picture')
+            ->withPivot('picture', 'picture_dimensions', 'picture_url', 'picture_path')
             ->withTimestamps();
     }
 }

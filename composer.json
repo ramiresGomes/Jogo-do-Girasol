@@ -17,7 +17,6 @@
         "predis/predis": "^1.1",
         "laracasts/flash": "^2.0",
         "kbwebs/multiauth": "~1.0",
-        "tritoq/cielo": "dev-master",
         "iatstuti/laravel-cascade-soft-deletes": "^1.2",
         "rap2hpoutre/laravel-log-viewer": "^0.9.0"
     },
@@ -32,13 +31,10 @@
     },
     "autoload": {
         "classmap": [
-            "database",
-            "app/Traits"
+            "database"
         ],
         "psr-4": {
-            "Square\\": "app/",
-            "RedePay\\Client\\": "app/Libs/redepay-php/lib/",
-            "CieloCheckout\\": "app/Libs/cielo-php/lib/"
+            "Square\\": "app/"
         }
     },
     "autoload-dev": {

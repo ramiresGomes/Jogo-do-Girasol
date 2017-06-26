@@ -15,6 +15,9 @@ class CreateMemberChallengeTable extends Migration
         Schema::create('members_challenges', function (Blueprint $table) {
             $table->increments('id');
             $table->string('picture');
+            $table->string('picture_dimensions');
+            $table->string('picture_url');
+            $table->string('picture_path');
             $table->integer('member_id')->unsigned();
             $table->integer('challenge_id')->unsigned();
             $table->foreign('member_id')->references('id')->on('members')->onDelete('cascade');

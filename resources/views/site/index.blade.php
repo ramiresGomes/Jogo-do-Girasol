@@ -8,7 +8,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="hero-block text-center">
-                                <img src="{{ asset('assets/site/images/logo-girassol.png') }}" alt="Jogo do Girasol">
+                                <img src="{{ asset('assets/site/images/logo-girasol.png') }}" alt="Jogo do Girasol">
                                 <h1 class="amatic text-uppercase bold fs40">O Jogo do Girasol</h1>
                             </div>
                         </div>

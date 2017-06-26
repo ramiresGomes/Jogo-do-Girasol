@@ -17,7 +17,7 @@ class Challenge extends Model
     public function members()
     {
         return $this->belongsToMany(Member::class, 'members_challenges')
-            ->withPivot('picture')
+            ->withPivot('picture', 'picture_dimensions', 'picture_url', 'picture_path')
             ->withTimestamps();
     }
 }

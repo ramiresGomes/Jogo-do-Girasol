@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Square 3.0 | @lang('square.admin.recovery-password.page-title')</title>
+    <title>Jogo do Girasol | @lang('square.admin.recovery-password.page-title')</title>
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -25,7 +25,7 @@
 
     <div class="login-box">
         <div class="login-logo">
-            <img src="{{ asset("assets/admin/images/logo-girassol.png") }}" alt="Jogo do Girasol">
+            <img src="{{ asset("assets/admin/images/logo-girasol.png") }}" alt="Jogo do Girasol">
         </div>
 
         <div class="login-box-body">

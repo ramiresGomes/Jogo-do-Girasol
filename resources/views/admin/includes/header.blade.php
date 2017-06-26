@@ -1,7 +1,7 @@
 <header class="main-header">
     <a href="{{ route('admin.dashboard') }}" class="logo">
         <span class="logo-mini">
-            <img class="fa-spin" width="30px" src="{{ asset("assets/admin/images/logo-girassol.png") }}">
+            <img class="fa-spin" width="30px" src="{{ asset("assets/admin/images/logo-girasol.png") }}">
         </span>
 
         <span class="logo-lg">Jogo do <b>Girasol</b></span>

@@ -17,8 +17,7 @@
 
 #member-panel .box-body h3 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    font-size: 20px;
-    margin: 10px 0;
+    margin: 0 0 10px;
     padding-bottom: 10px;
 }
 
@@ -47,7 +46,7 @@
 
 .profile-user-img {
     border: 3px solid rgba(0, 0, 0, 0.7);
-    margin: 0 auto;
+    margin: 0 auto 10px;
     padding: 3px;
     width: 100px;
 }
@@ -56,11 +55,21 @@
     border-color: orange;
 }
 
-#member-panel .nav-tabs-custom .tab-content {
-    min-height: 355px;
+#member-panel .tab-pane .tab-overlay {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    height: 100%;
+    padding: calc(25% - 60px) 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 
-#member-panel .nav-tabs-custom .tab-content b {
+#member-panel .nav-tabs-custom .tab-pane {
+    min-height: 357px;
+}
+
+#member-panel .nav-tabs-custom .tab-content b, #member-panel .nav-tabs-custom .tab-content strong {
     color: orange;
 }
 
