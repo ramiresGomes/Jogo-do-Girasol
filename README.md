@@ -5,7 +5,7 @@ Espalhe o amor nesse desafio do bem!
 
 ## ToDo
 
-- [] ddddd
+- [ ] ddddd
 
 ## Autor
 
