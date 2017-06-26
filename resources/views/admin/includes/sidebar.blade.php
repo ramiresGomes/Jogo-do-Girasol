@@ -29,11 +29,11 @@
 
                 <ul class="treeview-menu">
                     <li class="{{ Ekko::areActiveRoutes(['admin.member.*']) }}">
-                        <a href="{{ route('admin.member.index') }}"><i class="fa fa-user"></i> @lang('square.admin.pages.member')</a>
+                        <a href="{{ route('admin.member.index') }}"><i class="fa fa-user"></i> @lang('sunflower.admin.pages.member')</a>
                     </li>
 
                     <li class="{{ Ekko::areActiveRoutes(['admin.challenge.*']) }}">
-                        <a href="{{ route('admin.challenge.index') }}"><i class="fa fa-user"></i> @lang('square.admin.pages.challenge')</a>
+                        <a href="{{ route('admin.challenge.index') }}"><i class="fa fa-user"></i> @lang('sunflower.admin.pages.challenge')</a>
                     </li>
                 </ul>
             </li>

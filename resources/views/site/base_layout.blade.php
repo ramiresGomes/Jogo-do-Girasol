@@ -1,4 +1,4 @@
-@inject('site', 'Square\Http\Controllers\Site\SiteController')
+@inject('site', 'Sunflower\Http\Controllers\Site\SiteController')
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Http\Middleware;
+namespace Sunflower\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

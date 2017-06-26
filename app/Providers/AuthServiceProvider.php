@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Providers;
+namespace Sunflower\Providers;
 
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -14,7 +14,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Square\Model' => 'Square\Policies\ModelPolicy',
+        'Sunflower\Model' => 'Sunflower\Policies\ModelPolicy',
     ];
 
     /**

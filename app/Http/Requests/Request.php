@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Http\Requests;
+namespace Sunflower\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

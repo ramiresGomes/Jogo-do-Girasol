@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Models;
+namespace Sunflower\Models;
 
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;

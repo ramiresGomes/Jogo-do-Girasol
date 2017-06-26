@@ -34,7 +34,7 @@
             "database"
         ],
         "psr-4": {
-            "Square\\": "app/"
+            "Sunflower\\": "app/"
         }
     },
     "autoload-dev": {

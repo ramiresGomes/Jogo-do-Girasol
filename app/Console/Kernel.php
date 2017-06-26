@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Console;
+namespace Sunflower\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         // Commands\Inspire::class,
-        'Square\Console\Commands\TestCommand'
+        'Sunflower\Console\Commands\TestCommand'
     ];
 
     /**

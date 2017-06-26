@@ -1,12 +1,12 @@
 <?php
 
-namespace Square\Http\Controllers\Site\Member;
+namespace Sunflower\Http\Controllers\Site\Member;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
-use Square\Models\Member;
+use Sunflower\Models\Member;
 use Validator;
-use Square\Http\Controllers\Controller;
+use Sunflower\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

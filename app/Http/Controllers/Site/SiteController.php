@@ -1,9 +1,9 @@
 <?php
-namespace Square\Http\Controllers\Site;
+namespace Sunflower\Http\Controllers\Site;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Request as Requests;
-use Square\Http\Controllers\Controller;
+use Sunflower\Http\Controllers\Controller;
 
 class SiteController extends Controller
 {

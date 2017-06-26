@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Factory;
-use Square\Models\User;
+use Sunflower\Models\User;
 
 $faker = Factory::create('pt_BR');
 

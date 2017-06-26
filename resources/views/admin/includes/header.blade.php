@@ -25,20 +25,20 @@
                             <img src="{{ asset("/bower_components/AdminLTE/dist/img/user2-160x160.jpg") }}" class="img-circle" alt="{{ Auth::user()->name }}">
                             <p>
                                 {{ Auth::user()->name }}
-                                <small>@lang('square.custom.general.registered-at', ['time' => Auth::user()->getHumanCreated()])</small>
+                                <small>@lang('sunflower.custom.general.registered-at', ['time' => Auth::user()->getHumanCreated()])</small>
                             </p>
                         </li>
 
                         <li class="user-footer">
                             <div class="pull-left">
                                 <a href="{{ route('admin.user.edit', Auth::user()->id) }}" class="btn btn-default btn-flat">
-                                    @lang('square.custom.button.profile')
+                                    @lang('sunflower.custom.button.profile')
                                 </a>
                             </div>
 
                             <div class="pull-right">
                                 <a href="{{ url('logout') }}" class="btn btn-default btn-flat">
-                                    @lang('square.custom.button.sign-out')
+                                    @lang('sunflower.custom.button.sign-out')
                                 </a>
                             </div>
                         </li>

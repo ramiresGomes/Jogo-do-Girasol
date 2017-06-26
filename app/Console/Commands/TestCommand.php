@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Console\Commands;
+namespace Sunflower\Console\Commands;
 
 use Illuminate\Console\Command;
 

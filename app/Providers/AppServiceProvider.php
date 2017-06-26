@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Providers;
+namespace Sunflower\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

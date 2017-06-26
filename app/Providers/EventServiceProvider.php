@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Providers;
+namespace Sunflower\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Square\Events\SomeEvent' => [
-            'Square\Listeners\EventListener',
+        'Sunflower\Events\SomeEvent' => [
+            'Sunflower\Listeners\EventListener',
         ],
     ];
 

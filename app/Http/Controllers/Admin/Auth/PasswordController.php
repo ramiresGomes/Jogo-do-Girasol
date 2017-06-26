@@ -1,8 +1,8 @@
 <?php
 
-namespace Square\Http\Controllers\Admin\Auth;
+namespace Sunflower\Http\Controllers\Admin\Auth;
 
-use Square\Http\Controllers\Controller;
+use Sunflower\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

@@ -1,10 +1,10 @@
 <?php
 
-namespace Square\Http\Controllers\Admin;
+namespace Sunflower\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Lang;
-use Square\Models\Challenge;
+use Sunflower\Models\Challenge;
 
 class ChallengeController extends BaseController
 {
@@ -21,7 +21,7 @@ class ChallengeController extends BaseController
     {
         $page_title = $this->page_title;
         $page_description = $this->page_description['list'];
-        $breadcrumb = $this->breadcrumbAdd(Lang::get("square.admin.pages.{$this->current_page}"))->breadcrumb;
+        $breadcrumb = $this->breadcrumbAdd(Lang::get("sunflower.admin.pages.{$this->current_page}"))->breadcrumb;
 
         $challenges = Challenge::latest()->paginate(15);
 
@@ -32,8 +32,8 @@ class ChallengeController extends BaseController
     {
         $page_title = $this->page_title;
         $page_description = $this->page_description['new'];
-        $breadcrumb = $this->breadcrumbAdd(Lang::get("square.admin.pages.{$this->current_page}"), route("admin.{$this->current_page}.index"))
-            ->breadcrumbAdd(Lang::get('square.custom.button.new'))
+        $breadcrumb = $this->breadcrumbAdd(Lang::get("sunflower.admin.pages.{$this->current_page}"), route("admin.{$this->current_page}.index"))
+            ->breadcrumbAdd(Lang::get('sunflower.custom.button.new'))
             ->breadcrumb;
 
         return view("admin::{$this->current_page}.create", compact('page_title', 'page_description', 'breadcrumb'));
@@ -52,8 +52,8 @@ class ChallengeController extends BaseController
 
         $page_title = $this->page_title;
         $page_description = $this->page_description['edit'] . $challenge->name;
-        $breadcrumb = $this->breadcrumbAdd(Lang::get("square.admin.pages.{$this->current_page}"), route("admin.{$this->current_page}.index"))
-            ->breadcrumbAdd(Lang::get('square.custom.button.edit'))
+        $breadcrumb = $this->breadcrumbAdd(Lang::get("sunflower.admin.pages.{$this->current_page}"), route("admin.{$this->current_page}.index"))
+            ->breadcrumbAdd(Lang::get('sunflower.custom.button.edit'))
             ->breadcrumb;
 
         return view("admin::{$this->current_page}.edit",

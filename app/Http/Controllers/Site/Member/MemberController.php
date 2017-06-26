@@ -1,14 +1,14 @@
 <?php
 
-namespace Square\Http\Controllers\Site\Member;
+namespace Sunflower\Http\Controllers\Site\Member;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
-use Square\Http\Controllers\Controller;
-use Square\Models\Challenge;
-use Square\Models\Member;
+use Sunflower\Http\Controllers\Controller;
+use Sunflower\Models\Challenge;
+use Sunflower\Models\Member;
 
 class MemberController extends Controller
 {

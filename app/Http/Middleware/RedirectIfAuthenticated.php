@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Http\Middleware;
+namespace Sunflower\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

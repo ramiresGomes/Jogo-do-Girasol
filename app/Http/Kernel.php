@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Http;
+namespace Sunflower\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -24,11 +24,11 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \Square\Http\Middleware\EncryptCookies::class,
+            \Sunflower\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \Square\Http\Middleware\VerifyCsrfToken::class,
+            \Sunflower\Http\Middleware\VerifyCsrfToken::class,
         ],
 
         'api' => [
@@ -44,11 +44,11 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \Square\Http\Middleware\Authenticate::class,
+        'auth' => \Sunflower\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
-        'guest' => \Square\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Sunflower\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'member' => \Square\Http\Middleware\RedirectIfNotMember::class,
+        'member' => \Sunflower\Http\Middleware\RedirectIfNotMember::class,
     ];
 }

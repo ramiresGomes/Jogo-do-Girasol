@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Exceptions;
+namespace Sunflower\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;

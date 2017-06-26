@@ -152,13 +152,13 @@ return [
         /*
          * Application Service Providers...
          */
-        Square\Providers\AppServiceProvider::class,
-        Square\Providers\AuthServiceProvider::class,
-        Square\Providers\EventServiceProvider::class,
-        Square\Providers\RouteServiceProvider::class,
+        Sunflower\Providers\AppServiceProvider::class,
+        Sunflower\Providers\AuthServiceProvider::class,
+        Sunflower\Providers\EventServiceProvider::class,
+        Sunflower\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Laravelista\Ekko\EkkoServiceProvider::class,
-        Square\Providers\HelperServiceProvider::class,
+        Sunflower\Providers\HelperServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Spatie\LaravelAnalytics\LaravelAnalyticsServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,

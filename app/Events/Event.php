@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Events;
+namespace Sunflower\Events;
 
 abstract class Event
 {

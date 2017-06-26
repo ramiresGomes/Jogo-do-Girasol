@@ -1,10 +1,10 @@
 <?php
 
-namespace Square\Http\Controllers\Admin\Auth;
+namespace Sunflower\Http\Controllers\Admin\Auth;
 
-use Square\Models\User;
+use Sunflower\Models\User;
 use Validator;
-use Square\Http\Controllers\Controller;
+use Sunflower\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

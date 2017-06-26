@@ -19,7 +19,7 @@
 <body class="skin-blue hold-transition sidebar-mini">
     <div id="preloader">
         <div class="flat-spin">
-            <i class="square-flaticon flaticon-transport"></i>
+            <i class="sunflower-flaticon flaticon-transport"></i>
         </div>
     </div>
 
@@ -36,7 +36,7 @@
                 </h1>
 
                 <ol class="breadcrumb">
-                    <li><a href="{{ route('admin.dashboard') }}"><i class="fa fa-dashboard"></i> @lang('square.admin.dashboard.page-title')</a></li>
+                    <li><a href="{{ route('admin.dashboard') }}"><i class="fa fa-dashboard"></i> @lang('sunflower.admin.dashboard.page-title')</a></li>
                     @if (!empty($breadcrumb))
                         @foreach ($breadcrumb as $bread)
                             @if ($bread['name'] == end($breadcrumb)['name'])
@@ -58,7 +58,7 @@
     </div>
 
     <script src="{{ asset('assets/admin/js/dependency.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/square.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/sunflower.js') }}"></script>
 
     @stack('scripts')
 </body>

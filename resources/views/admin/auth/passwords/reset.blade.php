@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jogo do Girasol | @lang('square.admin.recovery-password.page-title')</title>
+    <title>Jogo do Girasol | @lang('sunflower.admin.recovery-password.page-title')</title>
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -16,10 +16,10 @@
     <script src="{{ asset('bower_components/respond/dest/respond.min.js') }}"></script>
     <![endif]-->
 </head>
-<body class="hold-transition login-page square-wallpaper">
+<body class="hold-transition login-page sunflower-wallpaper">
     <div id="preloader">
         <div class="flat-spin">
-            <i class="square-flaticon flaticon-transport"></i>
+            <i class="sunflower-flaticon flaticon-transport"></i>
         </div>
     </div>
 
@@ -29,14 +29,14 @@
         </div>
 
         <div class="login-box-body">
-            <p class="login-box-msg">@lang('square.admin.recovery-password.box-title')</p>
+            <p class="login-box-msg">@lang('sunflower.admin.recovery-password.box-title')</p>
 
             {!! Form::open(['route' => 'reset-password', 'method' => 'post', 'role' => 'form', 'class' => 'form-horizontal']) !!}
                 {!! Form::hidden('token', $token) !!}
 
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} has-feedback">
                     <div class="col-md-12">
-                        <input placeholder="@lang('square.custom.placeholder.email')" id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" autofocus>
+                        <input placeholder="@lang('sunflower.custom.placeholder.email')" id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" autofocus>
                         <i class="ion ion-at form-control-feedback"></i>
 
                         @if ($errors->has('email'))
@@ -49,7 +49,7 @@
 
                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} has-feedback">
                     <div class="col-md-12">
-                        <input placeholder="@lang('square.custom.placeholder.password')" id="password" type="password" class="form-control" name="password">
+                        <input placeholder="@lang('sunflower.custom.placeholder.password')" id="password" type="password" class="form-control" name="password">
                         <i class="icon ion-lock-combination form-control-feedback"></i>
 
                         @if ($errors->has('password'))
@@ -62,7 +62,7 @@
 
                 <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }} has-feedback">
                     <div class="col-md-12">
-                        <input placeholder="@lang('square.custom.placeholder.password_confirmation')" id="password_confirmation" type="password" class="form-control" name="password_confirmation">
+                        <input placeholder="@lang('sunflower.custom.placeholder.password_confirmation')" id="password_confirmation" type="password" class="form-control" name="password_confirmation">
                         <span class="icon ion-lock-combination form-control-feedback"></span>
 
                         @if ($errors->has('password_confirmation'))
@@ -76,7 +76,7 @@
                 <div class="form-group">
                     <div class="col-md-6 col-md-offset-4">
                         <button type="submit" class="btn btn-success">
-                            <i class="fa fa-btn fa-refresh"></i> @lang('square.custom.button.reset')
+                            <i class="fa fa-btn fa-refresh"></i> @lang('sunflower.custom.button.reset')
                         </button>
                     </div>
                 </div>
@@ -85,6 +85,6 @@
     </div>
 
     <script src="{{ asset('assets/admin/js/dependency.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/square.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/sunflower.js') }}"></script>
 </body>
 </html>

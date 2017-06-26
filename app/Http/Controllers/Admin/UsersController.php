@@ -1,9 +1,9 @@
 <?php
 
-namespace Square\Http\Controllers\Admin;
+namespace Sunflower\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Lang;
-use Square\Models\User;
+use Sunflower\Models\User;
 use Illuminate\Http\Request;
 
 class UsersController extends BaseController
@@ -21,7 +21,7 @@ class UsersController extends BaseController
     {
         $page_title = $this->page_title;
         $page_description = $this->page_description['list'];
-        $breadcrumb = $this->breadcrumbAdd(Lang::get("square.admin.pages.{$this->current_page}"))->breadcrumb;
+        $breadcrumb = $this->breadcrumbAdd(Lang::get("sunflower.admin.pages.{$this->current_page}"))->breadcrumb;
 
         $users = User::latest()->paginate(30);
 
@@ -33,8 +33,8 @@ class UsersController extends BaseController
     {
         $page_title = $this->page_title;
         $page_description = $this->page_description['new'];
-        $breadcrumb = $this->breadcrumbAdd(Lang::get("square.admin.pages.{$this->current_page}"), route("admin.{$this->current_page}.index"))
-            ->breadcrumbAdd(Lang::get('square.custom.button.new'))
+        $breadcrumb = $this->breadcrumbAdd(Lang::get("sunflower.admin.pages.{$this->current_page}"), route("admin.{$this->current_page}.index"))
+            ->breadcrumbAdd(Lang::get('sunflower.custom.button.new'))
             ->breadcrumb;
 
         return view("admin::{$this->current_page}.create",
@@ -60,8 +60,8 @@ class UsersController extends BaseController
 
         $page_title = $this->page_title;
         $page_description = $this->page_description['edit'] . $user->name;
-        $breadcrumb = $this->breadcrumbAdd(Lang::get("square.admin.pages.{$this->current_page}"), route("admin.{$this->current_page}.index"))
-            ->breadcrumbAdd(Lang::get('square.custom.button.edit'))
+        $breadcrumb = $this->breadcrumbAdd(Lang::get("sunflower.admin.pages.{$this->current_page}"), route("admin.{$this->current_page}.index"))
+            ->breadcrumbAdd(Lang::get('sunflower.custom.button.edit'))
             ->breadcrumb;
 
         return view("admin::{$this->current_page}.edit",

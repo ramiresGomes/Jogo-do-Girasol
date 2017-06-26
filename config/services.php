@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => Square\Models\Auth\User::class,
+        'model' => Sunflower\Models\Auth\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

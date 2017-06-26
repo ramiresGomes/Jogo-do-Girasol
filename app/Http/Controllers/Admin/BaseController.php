@@ -1,9 +1,9 @@
 <?php
 
-namespace Square\Http\Controllers\Admin;
+namespace Sunflower\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Lang;
-use Square\Http\Controllers\Controller;
+use Sunflower\Http\Controllers\Controller;
 
 class BaseController extends Controller
 {
@@ -19,12 +19,12 @@ class BaseController extends Controller
     {
         $this->page = $page;
 
-        $this->page_title = Lang::get("square.admin.pages.{$this->page}");
+        $this->page_title = Lang::get("sunflower.admin.pages.{$this->page}");
 
         $this->page_description = [
-            'list' => Lang::get('square.custom.page-description.list', ['module' => Lang::get("square.admin.pages.{$this->page}")]),
-            'new' => Lang::get('square.custom.page-description.new'),
-            'edit' => Lang::get('square.custom.page-description.edit')
+            'list' => Lang::get('sunflower.custom.page-description.list', ['module' => Lang::get("sunflower.admin.pages.{$this->page}")]),
+            'new' => Lang::get('sunflower.custom.page-description.new'),
+            'edit' => Lang::get('sunflower.custom.page-description.edit')
         ];
 
         $this->breadcrumb = [];

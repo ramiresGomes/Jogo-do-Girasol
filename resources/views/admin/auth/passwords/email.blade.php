@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jogo do Girasol | @lang('square.admin.recovery-password.page-title')</title>
+    <title>Jogo do Girasol | @lang('sunflower.admin.recovery-password.page-title')</title>
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -16,10 +16,10 @@
     <script src="{{ asset('bower_components/respond/dest/respond.min.js') }}"></script>
     <![endif]-->
 </head>
-<body class="hold-transition login-page square-wallpaper">
+<body class="hold-transition login-page sunflower-wallpaper">
     <div id="preloader">
         <div class="flat-spin">
-            <i class="square-flaticon flaticon-transport"></i>
+            <i class="sunflower-flaticon flaticon-transport"></i>
         </div>
     </div>
 
@@ -29,12 +29,12 @@
         </div>
 
         <div class="login-box-body">
-            <p class="login-box-msg">@lang('square.admin.recovery-password.box-title')</p>
+            <p class="login-box-msg">@lang('sunflower.admin.recovery-password.box-title')</p>
 
             {!! Form::open(['route' => 'recovery-password', 'method' => 'post', 'role' => 'form', 'class' => 'form-horizontal']) !!}
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} has-feedback">
                     <div class="col-md-12">
-                        <input placeholder="@lang('square.custom.placeholder.email')" id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" autofocus>
+                        <input placeholder="@lang('sunflower.custom.placeholder.email')" id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" autofocus>
                         <span class="ion ion-at form-control-feedback"></span>
                         @if ($errors->has('email'))
                             <span class="help-block">
@@ -48,14 +48,14 @@
                     <div class="col-xs-4">
                         <a href="{{ route('login') }}" class="btn btn-info btn-block btn-flat">
                             <i class="ion ion-reply"></i>
-                            @lang('square.custom.button.back')
+                            @lang('sunflower.custom.button.back')
                         </a>
                     </div>
 
                     <div class="col-xs-4 col-xs-offset-4">
                         <button type="submit" class="btn btn-success btn-block btn-flat">
                             <i class="ion ion-paper-airplane"></i>
-                            @lang('square.custom.button.send')
+                            @lang('sunflower.custom.button.send')
                         </button>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
     </div>
 
     <script src="{{ asset('assets/admin/js/dependency.min.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/square.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/sunflower.js') }}"></script>
 
     <script>
         @if (session('status'))

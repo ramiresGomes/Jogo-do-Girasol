@@ -1,6 +1,6 @@
 <?php
 
-namespace Square\Jobs;
+namespace Sunflower\Jobs;
 
 use Illuminate\Bus\Queueable;
 

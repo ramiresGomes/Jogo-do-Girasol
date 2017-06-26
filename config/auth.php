@@ -72,12 +72,12 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Square\Models\User::class,
+            'model' => Sunflower\Models\User::class,
         ],
 
         'members' => [
             'driver' => 'eloquent',
-            'model' => Square\Models\Member::class,
+            'model' => Sunflower\Models\Member::class,
         ]
 
         // 'users' => [
