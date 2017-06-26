@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="text-login text-center">
-                    <p>Com o intuito de provas que a internet pode ser usada para fazer o bem, nasceu o jogo do Girasol.</p>
+                    <p>Com o intuito de provar que a internet pode ser usada para fazer o bem, nasceu o jogo do Girasol.</p>
                     <p>Espalhe o amor nesse desafio do bem!</p>
                 </div>
             </div>

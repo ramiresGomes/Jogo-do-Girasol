@@ -1,6 +1,6 @@
 # Sunflower
 
-Com o intuito de provas que a internet pode ser usada para fazer o bem, nasceu o jogo do Girasol. 
+Com o intuito de provar que a internet pode ser usada para fazer o bem, nasceu o jogo do Girasol. 
 Espalhe o amor nesse desafio do bem!
 
 ## Autor

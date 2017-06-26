@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="text-hero text-center">
-                                <p>Com o intuito de provas que a internet pode ser usada para fazer o bem, nasceu o jogo do Girasol.</p>
+                                <p>Com o intuito de provar que a internet pode ser usada para fazer o bem, nasceu o jogo do Girasol.</p>
                                 <p>Espalhe o amor nesse desafio do bem!</p>
 
                                 <br>
