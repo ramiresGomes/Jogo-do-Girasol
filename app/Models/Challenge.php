@@ -11,7 +11,8 @@ class Challenge extends Model
 
     protected $fillable = [
         'name',
-        'description'
+        'description',
+        'is_information'
     ];
 
     public function members()

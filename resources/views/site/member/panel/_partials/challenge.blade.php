@@ -4,6 +4,7 @@
         {!! $next_challenge->description !!}
     </div>
 
+    @if(!$next_challenge->is_information)
     <div class="box-send text-center">
         <div class="btn transition03" id="btn-upload">
             <i class="fa fa-cloud-upload"></i><br>
@@ -19,6 +20,17 @@
         </div>
         {!! Form::close() !!}
     </div>
+    @else
+    <div class="box-continue text-center">
+        {!! Form::open(['route' => ['site.member.meetChallenge'], 'id' => 'form-meet-challenge']) !!}
+        {!! Form::hidden('challenge_id', $next_challenge->id) !!}
+        <button type="submit" class="btn btn-lg btn-panel">
+            <i class="fa fa-arrow-right"></i>
+            Prosseguir
+        </button>
+        {!! Form::close() !!}
+    </div>
+    @endif
 @else
     <h3 class="amatic bold fs30">Você está radiando!</h3>
     <div class="text-center">

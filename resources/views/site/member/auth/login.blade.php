@@ -101,14 +101,10 @@
             @endif
 
             let template = "<p>"+message+"</p><ul>";
-            
-            @if($errors->has('email'))
-                template += "<li>{{ $errors->first('email') }}</li>";
-            @endif
 
-            @if($errors->has('password'))
-                template += "<li>{{ $errors->first('password') }}</li>";
-            @endif
+            @foreach($errors->all() as $error)
+                template += "<li>{{ $error }}</li>";
+            @endforeach
 
             template += "</ul>";
 

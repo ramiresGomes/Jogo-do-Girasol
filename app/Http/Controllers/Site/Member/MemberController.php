@@ -40,16 +40,32 @@ class MemberController extends Controller
             return false;
         }
 
-        $file = $this->uploadPicture($request->file('picture'), $challenge, $member);
-
-        $challenge->members()->attach($member->id, [
-            'picture' => $file['picture_name'],
-            'picture_path' => $file['picture_path'],
-            'picture_url' => $file['picture_url'],
-            'picture_dimensions' => $file['picture_dimensions']
-        ]);
+        if (!empty($request->file('picture'))) {
+            $file = $this->uploadPicture($request->file('picture'), $challenge, $member);
+            $this->attach($challenge, $member, $file);
+        } else {
+            $this->attach($challenge, $member);
+        }
 
         return redirect()->back()->with('data', 'Parabéns, o desafio foi cumprido com sucesso.');
+    }
+
+    protected function attach(Challenge $challenge, Member $member, array $file = null)
+    {
+        if (!empty($file)) {
+            $challenge->members()->attach($member->id, [
+                'picture' => $file['picture_name'],
+                'picture_path' => $file['picture_path'],
+                'picture_url' => $file['picture_url'],
+                'picture_dimensions' => $file['picture_dimensions']
+            ]);
+
+            return true;
+        }
+
+        $challenge->members()->attach($member->id);
+
+        return true;
     }
 
     protected function getNextChallengeTemplate(Member $member = null)
@@ -95,5 +111,21 @@ class MemberController extends Controller
             'picture_path' => $picture_path,
             'picture_dimensions' => $dimensions
         ];
+    }
+
+    public function update(Request $request, $id)
+    {
+        $input = [
+            'name' => $request->name,
+            'email' => $request->email
+        ];
+
+        if (!empty($request['password'])) {
+            $input['password'] = bcrypt($request->password);
+        }
+
+        Member::find($id)->update($input);
+
+        return redirect()->back()->with('data', 'Dados atualizados com sucesso.');
     }
 }

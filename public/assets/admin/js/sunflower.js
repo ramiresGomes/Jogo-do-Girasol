@@ -192,21 +192,6 @@ function maskAndDatepickerInit() {
             }
         });
     });
-
-    $('.iCheck').exists(function () {
-        this.each(function(){
-            let self = $(this),
-                label = self.next(),
-                label_text = label.text();
-
-            label.remove();
-            self.iCheck({
-                checkboxClass: 'icheckbox_line-orange',
-                radioClass: 'iradio_line-orange',
-                insert: '<div class="icheck_line-icon"></div>' + label_text
-            });
-        })
-    });
 }
 
 function triggerPostDataFormOnChangeField() {
@@ -356,6 +341,21 @@ $(function() {
 
     $('select').exists(function () {
         this.select2();
+    });
+
+    $('.iCheck').each(function () {
+        var self = $(this),
+            label = self.next(),
+            label_text = label.text();
+
+        label.remove();
+        self.iCheck({
+            checkboxClass: 'icheckbox_line-blue',
+            radioClass: 'iradio_line-blue',
+            insert: '<div class="icheck_line-icon"></div>' + label_text
+        });
+    }).on('ifChanged', function () {
+        $(this).trigger('change');
     });
 
     $(".delete-confirmation").exists(function () {

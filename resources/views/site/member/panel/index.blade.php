@@ -20,9 +20,9 @@
                                     {{--<a aria-controls="timeline" role="tab" data-toggle="tab" href="#timeline">Linha do tempo</a>--}}
                                 {{--</li>--}}
 
-                                {{--<li role="presentation">--}}
-                                    {{--<a aria-controls="settings" role="tab" data-toggle="tab" href="#settings">Meus dados</a>--}}
-                                {{--</li>--}}
+                                <li role="presentation">
+                                    <a aria-controls="settings" role="tab" data-toggle="tab" href="#settings">Meus dados</a>
+                                </li>
 
                                 <li>
                                     <a href="{{ route('site.member.logout') }}">Sair</a>
@@ -208,65 +208,51 @@
                                 {{--</ul>--}}
                             {{--</div>--}}
 
-                            {{--<div class="tab-pane fade" id="settings">--}}
-                                {{--<form class="form-horizontal">--}}
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="inputName" class="col-sm-2 control-label">Name</label>--}}
+                            <div class="tab-pane fade" id="settings">
+                                <div class="box-body">
+                                    <h3 class="amatic bold fs30">Meus dados</h3>
+                                    <div class="col-xs-12">
+                                        {!! Form::model($member, ['route' => ['site.member.update', $member->id], 'data-toggle' => 'validator', 'class' => 'form-horizontal', 'id' => 'form-member-data']) !!}
+                                            <div class="col-xs-12">
+                                                <div class="form-group has-feedback">
+                                                    {!! Form::label('name', 'Nome') !!}
+                                                    {!! Form::text('name', null, ['placeholder' => 'Digite seu nome', 'class' => 'form-control', 'required']) !!}
+                                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
 
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<input type="email" class="form-control" id="inputName" placeholder="Name">--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
+                                            <div class="col-xs-12">
+                                                <div class="form-group has-feedback">
+                                                    {!! Form::label('email', 'Email') !!}
+                                                    {!! Form::text('email', null, ['placeholder' => 'Digite seu email', 'class' => 'form-control']) !!}
+                                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
 
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="inputEmail" class="col-sm-2 control-label">Email</label>--}}
+                                            <div class="col-xs-12">
+                                                <div class="form-group has-feedback">
+                                                    <label for="password">Senha <small class="text-warning">(somente se quiser alterar)</small></label>
+                                                    {!! Form::password('password', null, ['placeholder' => 'Digite sua senha', 'class' => 'form-control']) !!}
+                                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
 
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<input type="email" class="form-control" id="inputEmail" placeholder="Email">--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
+                                            <div class="col-xs-12">
+                                                <div class="form-group has-feedback text-center">
+                                                    <button type="submit" class="btn btn-panel btn-sm">
+                                                        <i class="fa fa-save"></i>
+                                                        Gravar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        {!! Form::close() !!}
+                                    </div>
+                                </div>
 
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="inputName" class="col-sm-2 control-label">Name</label>--}}
-
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<input type="text" class="form-control" id="inputName" placeholder="Name">--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="inputExperience" class="col-sm-2 control-label">Experience</label>--}}
-
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="inputSkills" class="col-sm-2 control-label">Skills</label>--}}
-
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<input type="text" class="form-control" id="inputSkills" placeholder="Skills">--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="form-group">--}}
-                                        {{--<div class="col-sm-offset-2 col-sm-10">--}}
-                                            {{--<div class="checkbox">--}}
-                                                {{--<label>--}}
-                                                    {{--<input type="checkbox"> I agree to the <a href="#">terms and conditions</a>--}}
-                                                {{--</label>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="form-group">--}}
-                                        {{--<div class="col-sm-offset-2 col-sm-10">--}}
-                                            {{--<button type="submit" class="btn btn-danger">Submit</button>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</form>--}}
-                            {{--</div>--}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -292,6 +278,17 @@
             $('#next-challenge').find('.tab-overlay').removeClass('hide');
             $(this).closest('form').trigger('submit');
         });
+
+        /** Show last tab on refresh **/
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            localStorage.setItem('lastTab', $(this).attr('href'));
+        });
+
+        let lastTab = localStorage.getItem('lastTab');
+        if (lastTab) {
+            $('[href="' + lastTab + '"]').tab('show');
+        }
+        /** Show last tab on refresh / End **/
 
         @if (session()->has('data'))
             notyGenerate('success', '{{ (string) Session::get('data') }}', 4000, 'fa-info-circle', 'topCenter');

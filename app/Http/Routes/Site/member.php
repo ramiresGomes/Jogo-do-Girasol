@@ -16,4 +16,5 @@ Route::group(['prefix' => 'membro', 'as' => 'member.', 'namespace' => 'Member'],
 
     Route::get('', ['as' => 'index', 'uses' => 'MemberController@index']);
     Route::post('cumprir-desafio', ['as' => 'meetChallenge', 'uses' => 'MemberController@meetChallenge']);
+    Route::post('atualizar-dados/{member_id}', ['as' => 'update', 'uses' => 'MemberController@update']);
 });

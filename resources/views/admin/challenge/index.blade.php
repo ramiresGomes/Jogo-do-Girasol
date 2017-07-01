@@ -20,8 +20,9 @@
                                 <table class="table table-bordered table-striped table-hover" id="users-table">
                                     <thead>
                                     <tr>
-                                        <th>Nome</th>
+                                        <th width="100px">Nome</th>
                                         <th>Descrição</th>
+                                        <th width="150px" class="text-center">Categoria</th>
                                         <th>Ações</th>
                                     </tr>
                                     </thead>
@@ -30,6 +31,7 @@
                                         <tr>
                                             <td>{{ $challenge->name }}</td>
                                             <td>{!! str_limit(strip_tags($challenge->description), 200) !!}</td>
+                                            <td class="text-center">{{ ($challenge->is_information) ? 'Motivacional' : 'Desafio' }}</td>
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn bg-navy dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -53,6 +55,7 @@
                                     <tr>
                                         <th>Nome</th>
                                         <th>Descrição</th>
+                                        <th class="text-center">Categoria</th>
                                         <th>Ações</th>
                                     </tr>
                                     </tfoot>

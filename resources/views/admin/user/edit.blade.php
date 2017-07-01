@@ -11,7 +11,7 @@
                         </div>
 
                         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                            <a href="{{ route('admin.member.index') }}" class="btn btn-block btn-primary">
+                            <a href="{{ route('admin.user.index') }}" class="btn btn-block btn-primary">
                                 <i class="fa fa-reply"></i>&nbsp;
                                 Voltar
                             </a>

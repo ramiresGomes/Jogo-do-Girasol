@@ -16,6 +16,7 @@ class CreateChallengesTable extends Migration
             $table->increments('id');
             $table->string('name', 100);
             $table->text('description');
+            $table->boolean('is_information')->default(false);
             $table->softDeletes();
             $table->timestamps();
         });

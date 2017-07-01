@@ -41,6 +41,7 @@ class ChallengeController extends BaseController
 
     public function store(Request $request)
     {
+        $request['is_information'] = $request['is_information'] ? 1 : 0;
         $challenge = Challenge::create($request->all());
 
         return redirect()->route("admin.{$this->current_page}.edit", $challenge->id);
@@ -62,6 +63,7 @@ class ChallengeController extends BaseController
 
     public function update(Request $request, $id)
     {
+        $request['is_information'] = $request['is_information'] ? 1 : 0;
         Challenge::find($id)->update($request->all());
     }
 

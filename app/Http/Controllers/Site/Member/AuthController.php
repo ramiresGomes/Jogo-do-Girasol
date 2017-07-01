@@ -4,8 +4,8 @@ namespace Sunflower\Http\Controllers\Site\Member;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use Sunflower\Http\Requests\MemberRegisterRequest;
 use Sunflower\Models\Member;
-use Validator;
 use Sunflower\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -30,12 +30,8 @@ class AuthController extends Controller
         return view('site::member.auth.register');
     }
 
-    public function store(Request $request)
+    public function store(MemberRegisterRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required|string|min:6'
-        ]);
-
         Member::create([
             'name' => $request->name,
             'email' => $request->email,

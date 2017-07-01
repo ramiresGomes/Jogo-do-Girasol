@@ -8,6 +8,14 @@
     </div>
 </div>
 
+<div class="col-xs-12 col-sm-6">
+    <div class="form-group">
+        {!! Form::label('&nbsp;') !!}
+        <input type="checkbox" name="is_information" class="iCheck form-control" @if (isset($challenge) && $challenge->is_information == 1) checked @endif>
+        {!! Form::label('Este desafio é informativo ou motivacional!') !!}
+    </div>
+</div>
+
 <div class="col-xs-12">
     <div class="form-group has-feedback">
         {!! Form::label('description', 'Texto do Conteúdo') !!}
