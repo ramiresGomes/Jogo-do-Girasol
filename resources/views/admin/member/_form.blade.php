@@ -26,3 +26,16 @@
         <div class="help-block with-errors"></div>
     </div>
 </div>
+
+<div class="col-xs-6 col-md-4">
+    <div class="form-group has-feedback">
+        {!! Form::label('phone', 'Telefone') !!}
+        {!! Form::text('phone', null, ['class' => 'form-control cellphone']) !!}
+        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block with-errors"></div>
+    </div>
+</div>
+
+@push('scripts')
+<script src="{{ asset('bower_components/AdminLTE/plugins/input-mask/jquery.inputmask.js') }}"></script>
+@endpush

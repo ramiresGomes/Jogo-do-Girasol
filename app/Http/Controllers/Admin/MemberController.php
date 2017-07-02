@@ -64,7 +64,17 @@ class MemberController extends BaseController
 
     public function update(Request $request, $id)
     {
-        Member::find($id)->update($request->all());
+        $input = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone
+        ];
+
+        if (!empty($request['password'])) {
+            $input['password'] = bcrypt($request->password);
+        }
+
+        Member::find($id)->update($input);
     }
 
     public function destroy($id)

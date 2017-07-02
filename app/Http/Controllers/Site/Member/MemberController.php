@@ -117,7 +117,8 @@ class MemberController extends Controller
     {
         $input = [
             'name' => $request->name,
-            'email' => $request->email
+            'email' => $request->email,
+            'phone' => $request->phone
         ];
 
         if (!empty($request['password'])) {

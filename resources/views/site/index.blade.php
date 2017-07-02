@@ -3,6 +3,8 @@
 @push('styles')
 <link rel="stylesheet" href="{{ asset('bower_components/slick-carousel/slick/slick.css') }}">
 <link rel="stylesheet" href="{{ asset('bower_components/slick-carousel/slick/slick-theme.css') }}">
+<link rel="stylesheet" href="{{ asset('bower_components/photoswipe/dist/photoswipe.css') }}">
+<link rel="stylesheet" href="{{ asset('bower_components/photoswipe/dist/default-skin/default-skin.css') }}">
 @endpush
 
 @section('content')
@@ -22,7 +24,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="text-hero text-center">
-                                <p>Com o intuito de provar que a internet pode ser usada para fazer o bem, nasceu o jogo do Girasol.</p>
+                                <p>Com o intuito de provar que a internet pode ser usada para fazer o bem, nasceu o jogo do Girassol, um projeto do grupo Serenidade a favor da preservação da vida.</p>
                                 <p>Espalhe o amor nesse desafio do bem!</p>
 
                                 <br>
@@ -55,14 +57,14 @@
                 <div class="col-xs-12">
                     <div class="challenges-list">
                         <div class="row">
-                            <div class="col-md-3 col-md-offset-2">
+                            <div class="col-xs-6 col-md-4 col-md-offset-1">
                                 <div class="challenge text-center amatic text-uppercase">
                                     <h2 class="cl-orange fs50 bold">Desafio 1</h2>
                                     <p class="cl-black fs35 bold">Escreva no braço de alguém que você ama uma frase de carinho</p>
                                 </div>
                             </div>
 
-                            <div class="col-md-3 col-md-offset-2">
+                            <div class="col-xs-6 col-md-4 col-md-offset-2">
                                 <div class="challenge text-center amatic text-uppercase">
                                     <h2 class="cl-orange fs50 bold">Desafio 2</h2>
                                     <p class="cl-black fs35 bold">Pense na melhor lembrança que já teve! E aproveite ela</p>
@@ -81,108 +83,27 @@
                 <div class="col-xs-12">
                     <h1 class="text-uppercase bold text-center">Jardim de Girassóis</h1>
 
-                    <div class="garden-gallery">
-                        <div class="slick">
-                            <div>
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
+                    <div class="photoswipe hide" id="gallery">
+                        @foreach ($gallery as $image)
+                            <figure id="gallery-image-{{ $image->id }}">
+                                <a class="thumbnail" href="{{ asset("uploads/gallery/{$image->name}")}}" data-size="{{ $image->dimensions }}">
+                                    <img src="{{ asset("uploads/gallery/thumbs/{$image->name}")}}" alt="Imagem da Galeria" class="img-responsive">
                                 </a>
-                            </div>
-
-                            <div>
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
-                                </a>
-                            </div>
-
-                        </div>
+                            </figure>
+                        @endforeach
                     </div>
 
-                    <div class="garden-gallery">
-                        <div class="row">
-                            <div class="col-xs-6 col-md-2">
-                                <a href="" class="scale-hover">
+                    <div class="garden-gallery photoswipe">
+                        <div class="slick">
+                            @foreach($gallery as $image)
+                            <div>
+                                <a data-href="#gallery-image-{{ $image->id }}" class="scale-hover gallery-view">
                                     <figure>
-                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
+                                        <img src="{{ $image->url }}/thumbs/{{ $image->name }}" alt="" class="img-responsive transition02">
                                     </figure>
                                 </a>
                             </div>
-
-                            <div class="col-xs-6 col-md-2">
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio2.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col-xs-6 col-md-2">
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio3.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col-xs-6 col-md-2">
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio4.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col-xs-6 col-md-2">
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
-                                </a>
-                            </div>
-
-                            <div class="col-xs-6 col-md-2">
-                                <a href="" class="scale-hover">
-                                    <figure>
-                                        <img src="{{ asset('assets/site/images/desafio2.jpg') }}" alt="" class="img-responsive transition02">
-                                    </figure>
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
 
@@ -195,13 +116,41 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="{{ asset('assets/site/images/marca-grupo-serenidade-mini.png') }}" width="100" alt="Grupo Serenidade">
+                        </div>
+
+                        <div class="media-body">
+                            <small>O grupo Serenidade é um grupo de autoconhecimento e espiritualidade sem fins lucrativos, surgido em 12/03/2002, dirigido pelo psicólogo Leonardo Nogueira.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    @include('_partials.photoswipe')
 @endsection
 
 @push('scripts')
 <script src="{{ asset('bower_components/slick-carousel/slick/slick.min.js') }}"></script>
+<script src="{{ asset("photoswipe-template.js") }}" type="text/javascript"></script>
+<script src="{{ asset("/bower_components/photoswipe/dist/photoswipe.min.js") }}" type="text/javascript"></script>
+<script src="{{ asset("/bower_components/photoswipe/dist/photoswipe-ui-default.min.js") }}" type="text/javascript"></script>
 <script>
     $(function () {
         const hero = $('#hero');
+
+        $('.gallery-view').on('click', function() {
+            let reference = $(this).data('href');
+            $(reference).trigger('click');
+        });
 
         $(window).on('resize', function(){
             setSectionWindowHeight(hero);
@@ -214,12 +163,11 @@
         });
 
         $('.slick').slick({
-            dots: true,
             infinite: true,
+            centerMode: true,
             speed: 300,
-            slidesToShow: 5,
-            variableWidth: false,
-            arrows: false,
+            slidesToScroll: 3,
+            variableWidth: true,
             autoplay: true,
             adaptiveHeight: true
         });
