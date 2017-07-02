@@ -56,7 +56,8 @@ return [
             'client' => 'Clientes',
             'member' => 'Membros',
             'challenge' => 'Desafios',
-            'user' => 'Usuários'
+            'user' => 'Usuários',
+            'gallery' => 'Fotos'
         ]
     ]
 ];

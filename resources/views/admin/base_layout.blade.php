@@ -6,6 +6,8 @@
 
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
+    @stack('styles')
+
     <link rel="stylesheet" href="{{ asset("assets/admin/css/min/admin.min.css") }}">
     <link href="{{ asset("/bower_components/AdminLTE/dist/css/skins/skin-blue.min.css")}}" rel="stylesheet" type="text/css" />
 

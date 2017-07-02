@@ -1,0 +1,32 @@
+.dropzone {
+    background: #e5e5e5;
+    border: 2px dashed #f39c12;
+    border-radius: 5px;
+    min-height: 150px;
+}
+
+.dropzone .dz-preview .dz-image {
+    border-radius: 0;
+}
+
+.dropzone .btn {
+    border-radius: 0;
+}
+
+.dropzone .dz-remove {
+    text-decoration: none;
+}
+
+.dropzone .dz-preview .dz-error-message {
+    top: -50px;
+}
+
+.dropzone .dz-preview .dz-error-message:after {
+    bottom: -6px;
+    top: auto;
+    transform: rotate(180deg);
+}
+
+.dropzone .dz-message {
+    margin: 40px 0;
+}

@@ -38,8 +38,12 @@
                 </ul>
             </li>
 
+            <li class="{{ Ekko::areActiveRoutes(['admin.gallery.*']) }}">
+                <a href="{{ route('admin.gallery.index') }}"><i class="fa fa-picture-o"></i> Galeria de @lang('sunflower.admin.pages.gallery')</a>
+            </li>
+
             <li class="treeview {{ Ekko::areActiveRoutes(['admin.user.*']) }}">
-                <a href="#"><i class="fa fa-lock"></i> <span>Sistema</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                <a href="#"><i class="fa fa-lock"></i> <span>Segurança</span> <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                 <ul class="treeview-menu">
                     <li class="{{ Ekko::areActiveRoutes(['admin.user.*']) }}">
                         <a href="{{ route('admin.user.index') }}"><i class="fa fa-users"></i> Usuários</a>

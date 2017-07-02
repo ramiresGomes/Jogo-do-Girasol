@@ -1,5 +1,10 @@
 @extends('site::base_layout')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('bower_components/slick-carousel/slick/slick.css') }}">
+<link rel="stylesheet" href="{{ asset('bower_components/slick-carousel/slick/slick-theme.css') }}">
+@endpush
+
 @section('content')
     <section id="hero">
         <div class="container">
@@ -77,6 +82,59 @@
                     <h1 class="text-uppercase bold text-center">Jardim de Girassóis</h1>
 
                     <div class="garden-gallery">
+                        <div class="slick">
+                            <div>
+                                <a href="" class="scale-hover">
+                                    <figure>
+                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
+                                    </figure>
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="" class="scale-hover">
+                                    <figure>
+                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
+                                    </figure>
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="" class="scale-hover">
+                                    <figure>
+                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
+                                    </figure>
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="" class="scale-hover">
+                                    <figure>
+                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
+                                    </figure>
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="" class="scale-hover">
+                                    <figure>
+                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
+                                    </figure>
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="" class="scale-hover">
+                                    <figure>
+                                        <img src="{{ asset('assets/site/images/desafio1.jpg') }}" alt="" class="img-responsive transition02">
+                                    </figure>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="garden-gallery">
                         <div class="row">
                             <div class="col-xs-6 col-md-2">
                                 <a href="" class="scale-hover">
@@ -140,6 +198,7 @@
 @endsection
 
 @push('scripts')
+<script src="{{ asset('bower_components/slick-carousel/slick/slick.min.js') }}"></script>
 <script>
     $(function () {
         const hero = $('#hero');
@@ -152,6 +211,17 @@
 
         hero.find('.hero-scroll').on('click', function (e) {
             $('html, body').animate({scrollTop: $('#challenges').offset().top}, 'slow');
+        });
+
+        $('.slick').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 5,
+            variableWidth: false,
+            arrows: false,
+            autoplay: true,
+            adaptiveHeight: true
         });
     });
 </script>

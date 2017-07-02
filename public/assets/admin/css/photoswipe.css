@@ -1,0 +1,68 @@
+.gallery.photoswipe figure {
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    height: 138px;
+    margin: calc(9% / 8) calc(9% / 8) 5px;
+    padding: 2px;
+    position: relative;
+    text-align: center;
+    width: calc(90% / 4);
+}
+
+.gallery.photoswipe figure a:first-child {
+    border-radius: 2px;
+    display: inline-block;
+    height: calc(100% - 1px);
+    overflow: hidden;
+    text-align: center;
+}
+
+.gallery.photoswipe figure a img {
+    border-radius: 2px;
+    display: inherit;
+}
+
+.gallery.photoswipe figure span {
+    position: absolute;
+}
+
+.gallery.photoswipe figure div {
+    background: rgba(0, 0, 0, .5);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.gallery.photoswipe figure:hover div {
+    display: block;
+}
+
+.gallery.photoswipe figure div a {
+    color: #fff;
+    display: block;
+    padding: 5px;
+    width: 100%;
+}
+
+.gallery.photoswipe figure span {
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 0 0 2px 2px;
+    bottom: 2px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    line-height: 40px;
+    opacity: 0;
+    position: absolute;
+    right: 2px;
+    transition: opacity .3s ease-in-out;
+    width: calc(100% - 4px);
+}
+
+.gallery.photoswipe figure:hover span {
+    opacity: 1;
+}
