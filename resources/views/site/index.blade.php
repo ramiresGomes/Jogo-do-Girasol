@@ -15,8 +15,8 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="hero-block text-center">
-                                <img src="{{ asset('assets/site/images/logo-girasol.png') }}" alt="Jogo do Girasol">
-                                <h1 class="amatic text-uppercase bold fs40">O Jogo do Girasol</h1>
+                                <img src="{{ asset('assets/site/images/logo-girasol.png') }}" alt="Jogo do Girassol">
+                                <h1 class="amatic text-uppercase bold fs40">O Jogo do Girassol</h1>
                             </div>
                         </div>
                     </div>
@@ -24,12 +24,12 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="text-hero text-center">
-                                <p>Com o intuito de provar que a internet pode ser usada para fazer o bem, nasceu o jogo do Girassol, um projeto do grupo Serenidade a favor da preservação da vida.</p>
+                                <p>Com o intuito de provar que a internet pode ser usada para fazer o bem, nasceu o Jogo do Girassol, um projeto do grupo Serenidade a favor da preservação da vida.</p>
                                 <p>Espalhe o amor nesse desafio do bem!</p>
 
                                 <br>
 
-                                <a href="{{ route('site.member.index') }}" class="btn btn-round btn-white text-uppercase">Entrar no jogo</a>
+                                <a href="{{ route('site.member.index') }}" class="btn btn-round btn-white text-uppercase">Entrar no Jogo</a>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
 
                 <div class="col-xs-10 col-md-offset-1">
                     <p class="cl-black text-center text-uppercase">
-                        Todas as tarefas devem ser de algum forma registradas em suas redes sociais, com a #ojogodogirasol, marcando @eusouumgirasol, seu mentor estará observando!
+                        Todas as tarefas devem ser de algum forma registradas em suas redes sociais, com a #ojogodogirassol, marcando @eusouumgirassol, seu semeador estará observando!
                     </p>
                 </div>
 
