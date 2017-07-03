@@ -43,7 +43,11 @@ class MemberController extends BaseController
 
     public function store(Request $request)
     {
-        $member = Member::create($request->all());
+        $member = Member::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
+        ]);
 
         return redirect()->route("admin.{$this->current_page}.edit", $member->id);
     }
