@@ -99,7 +99,7 @@
                             <div>
                                 <a data-href="#gallery-image-{{ $image->id }}" class="scale-hover gallery-view">
                                     <figure>
-                                        <img src="{{ $image->url }}/thumbs/{{ $image->name }}" alt="" class="img-responsive transition02">
+                                        <img src="{{ asset("uploads/gallery/thumbs/{$image->name}")}}" alt="" class="img-responsive transition02">
                                     </figure>
                                 </a>
                             </div>
